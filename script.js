@@ -1,14 +1,13 @@
-const botaoControle = document.getElementById('btnPlay');
+const palavraPortfolio = document.getElementById('btnPlay');
 const painelImagens = document.getElementById('painelAnimacoes');
 
-function gerenciarPainel() {
-    painelImagens.classList.toggle('ativo');
+function gerenciarPainel(evento) {
+    // Isso impede que a página recarregue ao clicar na palavra
+    evento.preventDefault();
 
-    if (painelImagens.classList.contains('ativo')) {
-        botaoControle.textContent = 'Parar Pinguins';
-    } else {
-        botaoControle.textContent = 'Liberar Pinguins';
-    }
+    // Mostra ou esconde as imagens
+    painelImagens.classList.toggle('ativo');
 }
 
-botaoControle.addEventListener('click', gerenciarPainel);
+// Avisa o JavaScript para olhar quando a palavra for clicada
+palavraPortfolio.addEventListener('click', gerenciarPainel);
