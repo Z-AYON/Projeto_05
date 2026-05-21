@@ -109,3 +109,7 @@ html{
       from { top: 0; }
    to { top: calc(100vh - var(--tamanho)); }
 }
+
+.container-animacoes{
+    display: none;
+}
